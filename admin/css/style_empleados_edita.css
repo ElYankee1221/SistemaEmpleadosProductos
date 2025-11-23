@@ -1,0 +1,119 @@
+/* --- css/style_form_empleados.css --- */
+/* Estilos (Versión Simple) para formularios de Alta y Edición */
+
+.regresar {
+    display: block; /* Lo hacemos bloque para poder darle margen */
+    margin: 20px 10%;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/* Contenedor para centrar el formulario */
+.form-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* La tarjeta blanca principal */
+.form-card {
+    width: 100%;
+    max-width: 700px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    /* Simplificado: quitamos la sombra (box-shadow) */
+    /* Mantenemos el borde redondeado, pero más sutil */
+    border-radius: 16px; 
+    padding: 30px; /* Un padding ligeramente reducido */
+    box-sizing: border-box; 
+    /* Agregamos un borde simple para reemplazar la sombra */
+    border: 1px solid #ddd; 
+}
+
+/* Grupo de formulario (etiqueta + input) */
+.form-group {
+    margin-bottom: 20px; /* Un margen más estándar */
+}
+
+/* Estilo para las etiquetas (labels) */
+.form-group label {
+    display: block;
+    font-weight: 900; /* 900 es muy pesado, 700 es un "bold" estándar */
+    color: #000000; /* El negro puro (#000) es un poco fuerte */
+    margin-bottom: 8px;
+    font-size: 16px;
+}
+
+/* Estilo para los inputs de texto y select */
+.form-group input[type="text"],
+.form-group input[type="password"],
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-family: "Doto", sans-serif; 
+    /* Borde más estándar y sutil */
+    border: 1px solid #ccc; 
+    border-radius: 5px; /* Radio más sutil */
+    box-sizing: border-box;
+    /* --- TRANSICIÓN ELIMINADA --- */
+}
+
+.form-group input:hover{
+    border: 2px solid #1abc9c; 
+}
+
+.form-group select:hover{
+    border: 2px solid #1abc9c; 
+}
+/* --- BLOQUE :focus ELIMINADO --- */
+/* Ahora, el navegador usará su propio resaltado por defecto 
+   (usualmente un borde azul o un "outline"). 
+   Es más simple y no requiere la regla "outline: none".
+*/
+
+/* Estilo para el input de archivo */
+.form-group input[type="file"] {
+    font-size: 16px;
+    font-family: "Doto", sans-serif;
+}
+
+
+
+/* Botón de envío */
+.btn-submit {
+    background-color: #1abc9c;
+    color: white;
+    padding: 12px 20px; /* Un padding más estándar */
+    border: none;
+    border-radius: 5px; /* Consistente con los inputs */
+    font-size: 18px;
+    font-weight: 700;
+    font-family: "Doto", sans-serif;
+    cursor: pointer;
+    /* --- TRANSICIÓN ELIMINADA --- */
+    width: 100%; 
+}
+
+.btn-submit:hover {
+    /* Dejamos solo el cambio de color, que es un efecto simple y útil */
+    background-color: #16a085;
+    /* --- font-weight: 900 ELIMINADO --- */ 
+    /* (Quitar esto evita que el botón "salte" de tamaño) */
+}
+
+/* Contenedores de mensajes de error */
+#mensaje, #mensaje_correo {
+    font-size: 15px;
+    color: #e74c3c; /* Rojo de error */
+    font-weight: 700;
+    /* --- "TRUCO" DE MARGEN NEGATIVO ELIMINADO --- */
+    /* Ahora simplemente se posiciona 5px debajo del input */
+    margin-top: 5px; 
+}
+
+/* Este #mensaje es para el error general del 'submit' */
+#mensaje {
+    margin-top: 20px;
+    text-align: center;
+}

@@ -1,0 +1,93 @@
+/*global.css*/
+
+@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&display=swap');
+
+/*ESTILOS BASE (Herencia)*/
+body {
+    background-color: rgb(230, 230, 230);
+    /* ¡Aquí definimos la fuente UNA SOLA VEZ! */
+    font-family: "Doto", sans-serif;
+    /* Un peso normal por defecto */
+    font-weight: 400; 
+    color: #000000; /* Un color de texto base oscuro, no negro puro */
+    margin: 0;
+    padding: 0;
+}
+
+/*TIPOGRAFÍA GLOBAL*/
+h1 {
+    font-weight: 900;
+    font-size: 70px;
+    text-align: center;
+    margin: 50px;
+    color: #000000; 
+}
+
+h2 {
+    font-weight: 700;
+    font-size: 32px;
+    color: #000000;
+    margin-top: 0;
+}
+
+/* Estilo base para todos los enlaces */
+a {
+    color: #007BFF; 
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/*ESTILOS DEL MENÚ*/
+nav.menu-principal {
+    width: 100%;
+    background-color: #1abc9c ; 
+    padding: 15px 10%; /* Relleno y centrado (10% de margen a los lados) */
+    box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+    display: flex;
+    justify-content: flex-start; /* Alinea los enlaces a la izquierda */
+    gap: 20px; /* Espacio entre enlaces */
+}
+
+nav.menu-principal a {
+    color: #000000;
+    font-weight: 700;
+    font-size: 18px;
+    align-self: center; 
+    text-decoration: none;
+}
+
+nav.menu-principal a:hover {
+    color: white; /* Un color de acento al pasar el mouse */
+    text-decoration: none;
+}
+
+
+/* Estilos para alinear el saludo y "Salir" a la derecha */
+.saludo-usuario {
+    color: #ecf0f1; 
+    font-size: 16px;
+    font-weight: 500;
+    margin-right: 15px;
+    /* Esto centra verticalmente el texto con los enlaces */
+    align-self: center; 
+}
+
+/* Un estilo de "botón" para el enlace de Salir */
+.btn-salir {
+    background-color: #e74c3c; /* Rojo */
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.btn-salir:hover {
+    background-color: #c0392b; /* Rojo más oscuro */
+    text-decoration: none;
+    color: white;
+}

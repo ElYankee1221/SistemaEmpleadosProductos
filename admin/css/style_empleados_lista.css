@@ -1,0 +1,79 @@
+/* --- style_empleados_lista.css --- */
+
+/*Enlace "Crear nuevo registro"*/
+.crearRegistro {
+    display: block; /* Lo hacemos bloque para poder darle margen */
+    margin: 20px 10%;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/*Contenedor para centrar la tabla*/
+.centro {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/*El contenedor principal de la tabla*/
+.padreTabla {
+    overflow: hidden; /* Para que los bordes redondeados funcionen */
+    border-radius: 16px;
+    width: 80%;
+    /* Un color más sutil que 'lightseagreen' */
+    background-color: #ffffff; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.padreTabla table {
+    width: 100%;
+    border-collapse: collapse; /* Bordes colapsados es más limpio */
+}
+
+/*Encabezado de la tabla*/
+.encabezado {
+    height: 60px; /* Un poco más de altura */
+    text-align: center;
+    background-color: #1abc9c; /* Un fondo gris claro para el header */
+}
+
+th {
+    font-size: 20px;
+    font-weight: 900;
+    /* color: #34495e; Color oscuro para el texto del header */
+    padding: 10px; /* Añadimos padding */
+    border-bottom: 3px solid #e0e0e0; /* Un borde inferior sólido */
+}
+
+/*Estilos de las filas de datos*/
+.filaEmpleado {
+    height: 50px;
+    background-color: white;
+    border-bottom: 1px solid #f0f0f0; /* Un borde sutil entre filas */
+    transition: background-color 0.2s ease;
+}
+
+/*Efecto hover en las filas*/
+.filaEmpleado:hover {
+    background-color: #f9f9f9;
+}
+
+td {
+    font-weight: 500; /* Un poco menos pesado que 900 para la legibilidad */
+    padding: 10px;
+    text-align: center;
+    /* Eliminamos los bordes laterales, ya es limpio con el borde inferior */
+}
+
+/*Estilos para los botones/enlaces de acción dentro de la tabla*/
+td a {
+    font-weight: 700;
+}
+
+td a.eliminar { /* Si le das una clase "eliminar" a tu enlace de eliminar */
+    color: #e74c3c; /* Color rojo para eliminar */
+}
+
+td a.eliminar:hover {
+    color: #c0392b;
+}

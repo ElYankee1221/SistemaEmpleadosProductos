@@ -1,0 +1,81 @@
+/* --- style_empleados_detalle.css --- */
+
+/* Enlace "Regresar" */
+.regresar {
+    display: block; /* Lo hacemos bloque para poder darle margen */
+    margin: 20px 10%;
+    font-weight: 900;
+    font-size: 18px;
+}
+
+/* Contenedor principal para la tarjeta */
+.detalle-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* La tarjeta blanca donde va la información */
+.detalle-card {
+    width: 100%;
+    max-width: 700px; /* Un ancho máximo para la tarjeta */
+    background-color: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    display: flex; /* Usamos flexbox para la foto al lado del texto */
+    overflow: hidden; /* Para que la imagen no se salga */
+}
+
+/* Contenedor de la foto de perfil */
+.detalle-foto {
+    flex-basis: 250px; /* Ancho fijo para la foto */
+    background-color: #f4f6f8; /* Un fondo si no hay foto */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detalle-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la foto cubra el espacio */
+}
+
+/* Contenedor de la información */
+.detalle-info {
+    padding: 40px;
+    flex-grow: 1; /* El texto toma el espacio restante */
+}
+
+.detalle-info h2 {
+    /* El nombre del empleado */
+    font-weight: 900;
+    font-size: 36px;
+    color: #000000;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.detalle-info .puesto {
+    /* El "Rol" o "Puesto" */
+    font-size: 20px;
+    font-weight: 700;
+    color: #1abc9c; /* Color de acento */
+    margin-bottom: 30px;
+}
+
+/* Estilos para los pares "Etiqueta: Valor" */
+.detalle-info p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.detalle-info p strong {
+    /* La etiqueta (ej. "Correo:", "ID:") */
+    font-weight: 900;
+    color: #000000; /* Mismo color que el header de la tabla */
+    display: block; /* La etiqueta arriba, el valor abajo */
+    font-size: 16px;
+    margin-bottom: 2px;
+}

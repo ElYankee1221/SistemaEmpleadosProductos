@@ -1,0 +1,10 @@
+#Ignorar archivos de sistema y temporales 
+.DS_Store
+Thumbs.db
+
+#Ignorar carpetas de archivos subidos (Opcional)
+#Si no quieres descargar las imagenes de prueba en la otra PC, descomenta esta linea:
+#admin/archivos/
+
+#Ignorar la configuracion de conexion real
+admin/funciones/conecta.php
