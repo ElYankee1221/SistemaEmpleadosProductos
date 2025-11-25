@@ -1,6 +1,9 @@
 <?php
 //empleados_edita.php
 
+     
+    include('menu.php');      
+
     require "funciones/conecta.php";
     $con = conecta();
     $id = $_REQUEST['id'];
@@ -85,13 +88,14 @@
         </script>
     </head>
     <body>
-        <?php 
-            include('menu.php');      
-        ?>
+
         
         <h1>Editar empleados</h1>
         
-        <a href="empleados_lista.php" class="regresar">← Regresar al listado</a>
+
+        <div class="regresar">
+            <a href="empleados_lista.php">← Regresar al listado</a>
+        </div>
 
         <div class="form-container">
             
@@ -102,28 +106,28 @@
                     <input type="hidden" name="id" id="id" value="<?php echo $id ?>"/>
                     
                     <div class="form-group">
-                        <label for="nombre">Nombre:</label>
+                        <label>Nombre:</label>
                         <input type="text" name="nombre" id="nombre" placeholder="Nombre" value="<?php echo $nombre ?>"/>
                     </div>
 
                     <div class="form-group">
-                        <label for="apellidos">Apellidos:</label>
+                        <label>Apellidos:</label>
                         <input type="text" name="apellidos" id="apellidos" placeholder="Apellidos" value="<?php echo $apellidos ?>"/>
                     </div>
                     
                     <div class="form-group">
-                        <label for="correo">Correo:</label>
+                        <label>Correo:</label>
                         <input type="text" name="correo" id="correo" placeholder="Correo" value="<?php echo $correo ?>" onBlur="sale();"/>
                         <div id="mensaje_correo"></div>
                     </div>
 
                     <div class="form-group">
-                        <label for="pass">Nueva Contraseña:</label>
+                        <label>Nueva Contraseña:</label>
                         <input type="password" name="pass" id="pass" placeholder="Dejar en blanco para no cambiar"/>
                     </div>
 
                     <div class="form-group">
-                        <label for="rol">Rol:</label>
+                        <label>Rol:</label>
                         <select name="rol" id="rol">
                             <option value="0">Selecciona</option>
                             <option value="1" <?php echo ($numerorol == 1) ? 'selected' : ''?>>Gerente</option>
@@ -132,7 +136,7 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="archivo">Foto de perfil (Opcional):</label>
+                        <label>Foto de perfil (Opcional):</label>
                         <input type="file" id="archivo" name="archivo">
                     </div>
 

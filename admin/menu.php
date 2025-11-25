@@ -12,7 +12,9 @@
     
     <a href="bienvenido.php">Inicio</a>
     <a href="empleados_lista.php">Empleados</a>
-    <a href="empleados_lista.php">Productos</a>
+    <a href="productos_lista.php">Productos</a>
+    <a href="promociones.php">Promociones</a>
+    <a href="pedidos_lista.php">Pedidos</a>
     <div style="margin-left: auto;"></div> 
 
     <span class="saludo-usuario">Bienvenido, <?php echo $userName; ?></span>

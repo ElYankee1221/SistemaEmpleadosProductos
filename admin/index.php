@@ -1,25 +1,28 @@
+<?php
+    session_start();
+
+    if (isset($_SESSION['userName'])) {
+        header("Location: bienvenido.php");
+        exit;
+    }
+?>
+
 <html>
     <head>
+        <link rel="stylesheet" href="css/global.css">
+        <link rel="stylesheet" href="css/style_index.css">
         <title>Formularios</title>
-        <style>
-            #mensaje {
-                font-size: 15px;
-                color: red;
-            }
-        </style>
+
         <script src="js/jquery-3.3.1.min.js"></script>
         <script>
             function validar() {
-                var correo = $('#correo').val();
-                // var correo = document.Forma01.correo.value;
-                //console.log(correo);
 
+                var correo = $('#correo').val();
                 var pass = $('#pass').val();
-                // var pass = document.Forma01.pass.value;
-                //console.log(pass);
 
                 if (correo == '' || pass == '') {
                     $('#mensaje').html('Faltan campos por llenar');
+                    setTimeout("$('#mensaje').html('');",5000);
                 }
                 else {
                     $.ajax({
@@ -31,9 +34,9 @@
                         //Recibe respuesta (res)
                             if(res == 1) {
                                 window.location.href = "bienvenido.php";
-                                // $('#mensaje').html('Si jala');
                             } else {
                                 $('#mensaje').html('Datos incorrectos');
+                                setTimeout("$('#mensaje').html('');",5000);
                             }
                         },error: function() {
                             alert('Error archivo no encontrado...');
@@ -47,13 +50,26 @@
     <body>
         <h1>Login</h1>
 
-        <form name="Forma01">
+        <div class="form-container">
+            <div class="form-card">
 
-            <input type="text" name="correo" id="correo" placeholder="Escribe tu correo" /><br>
-            <input type="text" name="pass" id="pass" placeholder="Escribe tu contraseña" /><br>
-            <input onclick="validar(); return false;" type="submit" value="Enviar" />
-        </form>
+                <form name="Forma01">
 
-        <div id="mensaje"></dvi>
+                    <div class="form-group">
+                        <label for="nombre">Correo:</label>
+                        <input type="text" name="correo" id="correo" placeholder="Escribe tu correo" /><br>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="nombre">Contraseña:</label>
+                        <input type="password" name="pass" id="pass" placeholder="Escribe tu contraseña" /><br>
+                    </div>
+
+                    <input onclick="validar(); return false;" type="submit" value="Enviar" class="btn-submit"/>
+                </form>
+        
+                <div id="mensaje"></div>
+            </div>
+        </div>
     </body>
 </html>

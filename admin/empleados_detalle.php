@@ -1,4 +1,7 @@
 <?php
+//empleados_detalle.php
+
+    include('menu.php');
     require "funciones/conecta.php";
     $con = conecta();
     $id = $_REQUEST['id'];
@@ -36,13 +39,13 @@
     <script>
             
     </script>
-    <body>
-        <?php 
-            include('menu.php');         
-        ?>
+    <body>         
 
         <h1>Detalle del empleado <?php echo($id); ?></h1>
-        <a href="empleados_lista.php" class="regresar">← Regresar al listado</a>
+
+        <div class="regresar">
+            <a href="empleados_lista.php">← Regresar al listado</a>
+        </div>
 
         <div class="detalle-container">
 

@@ -9,6 +9,6 @@
             include('menu.php');         
         ?>
         </br>
-        <h1>Hola, bienvenido al sistema <?php echo $userName; ?>.</h1>
+        <h1>Lista de pedidos</h1>
     </body>
 </html>

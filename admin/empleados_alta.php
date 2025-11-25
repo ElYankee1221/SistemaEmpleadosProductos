@@ -61,8 +61,10 @@
         ?>
         
         <h1>Alta de empleados</h1>
-        <a href="empleados_lista.php" class="regresar">← Regresar al listado</a>
-        
+
+        <div class="regresar">
+            <a href="empleados_lista.php">← Regresar al listado</a>
+        </div>
         
         <div class="form-container">
             <div class="form-card">
