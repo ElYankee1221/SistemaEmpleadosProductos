@@ -47,11 +47,14 @@
 /* Estilo para los inputs de texto y select */
 .form-group input[type="text"],
 .form-group input[type="password"],
+.form-group input[type="number"],
+.form-group textarea,
 .form-group select {
     width: 100%;
     padding: 12px;
     font-size: 16px;
     font-family: "Doto", sans-serif; 
+    font-weight: 700;
     /* Borde más estándar y sutil */
     border: 1px solid #ccc; 
     border-radius: 5px; /* Radio más sutil */
@@ -60,17 +63,19 @@
 }
 
 .form-group input:hover{
-    border: 2px solid #1abc9c; 
+    border: 1px solid #1abc9c;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+}
+
+.form-group textarea:hover{
+    border: 1px solid #1abc9c; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
 .form-group select:hover{
-    border: 2px solid #1abc9c; 
+    border: 1px solid #1abc9c; 
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
-/* --- BLOQUE :focus ELIMINADO --- */
-/* Ahora, el navegador usará su propio resaltado por defecto 
-   (usualmente un borde azul o un "outline"). 
-   Es más simple y no requiere la regla "outline: none".
-*/
 
 /* Estilo para el input de archivo */
 .form-group input[type="file"] {
@@ -96,10 +101,8 @@
 }
 
 .btn-submit:hover {
-    /* Dejamos solo el cambio de color, que es un efecto simple y útil */
     background-color: #16a085;
-    /* --- font-weight: 900 ELIMINADO --- */ 
-    /* (Quitar esto evita que el botón "salte" de tamaño) */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 /* Contenedores de mensajes de error */

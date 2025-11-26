@@ -28,7 +28,7 @@
 
 /* Contenedor de la foto de perfil */
 .detalle-foto {
-    flex-basis: 250px; /* Ancho fijo para la foto */
+    flex-basis: 300px; /* Ancho fijo para la foto */
     background-color: #f4f6f8; /* Un fondo si no hay foto */
     display: flex;
     align-items: center;
@@ -43,6 +43,7 @@
 
 /* Contenedor de la información */
 .detalle-info {
+    max-width: 300px;
     padding: 40px;
     flex-grow: 1; /* El texto toma el espacio restante */
 }
@@ -69,6 +70,10 @@
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
+}
+
+.detalle-info textarea {
+    
 }
 
 .detalle-info p strong {
